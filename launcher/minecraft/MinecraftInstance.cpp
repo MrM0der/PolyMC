@@ -389,10 +389,7 @@ QStringList MinecraftInstance::javaArguments()
 {
     QStringList args;
 
-    if (!m_authlibinjector_javaagent->isNull())
-    {
-        args.append(QString("-javaagent:%1").arg(*m_authlibinjector_javaagent));
-    }
+
 
     // custom args go first. we want to override them if we have our own here.
     args.append(extraArguments());
